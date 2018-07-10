@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E0E0"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme"
+        app:logo="@drawable/ic_logo"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:title="@string/app_name"
+        app:titleMarginStart="24dp"
+        app:titleTextColor="@android:color/white" />
+
+    <FrameLayout
+        android:id="@+id/filter_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="?attr/colorPrimary"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+
+
+    </FrameLayout>
+
+    <!-- Main Restaurants recycler -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filter_bar_container"
+        android:background="@android:color/white"
+        tools:listitem="@layout/item_menu" />
+
+    <!-- Shadow below toolbar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/filter_bar_container"
+        android:background="@drawable/bg_shadow" />
+
+
+
+</RelativeLayout>

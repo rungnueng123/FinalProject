@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/menu_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#757575"
+        android:scaleType="centerCrop"
+        android:src="@drawable/maxresdefault" />
+
+    <TextView
+        android:id="@+id/menu_name"
+        style="@style/AppTheme.Subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@+id/star"
+        android:layout_toRightOf="@+id/menu_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Foo's Name" />
+
+
+    <TextView
+        android:id="@+id/menu_item_namethai"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menu_name"
+        android:layout_below="@+id/menu_name"
+        android:textColor="@color/greySecondary"
+        tools:text="name thai" />
+
+    <ImageView
+        android:src="@drawable/ic_toggle_star_outline_24"
+        android:id="@+id/star"
+        style="@style/AppTheme.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/greySecondary"
+        />
+
+</RelativeLayout>

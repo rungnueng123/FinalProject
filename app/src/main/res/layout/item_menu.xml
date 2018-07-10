@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/menu_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#757575"
+        android:scaleType="centerCrop"
+        android:src="@drawable/maxresdefault" />
+
+    <TextView
+        android:id="@+id/menu_name"
+        style="@style/AppTheme.Subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/menu_image"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="-2dp"
+        android:layout_toLeftOf="@+id/star"
+        android:layout_toRightOf="@+id/menu_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Foo's Name" />
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/menu_item_rating"
+        style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
+        android:progressBackgroundTint="@color/second_star"
+        android:progressTint="@color/primary_star"
+        android:secondaryProgressTint="@color/second_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menu_name"
+        android:layout_below="@+id/menu_name"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/menu_item_num_ratings"
+        style="@style/AppTheme.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/menu_item_rating"
+        android:layout_alignTop="@+id/menu_item_rating"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/menu_item_rating"
+        android:gravity="center_vertical"
+        android:textColor="@color/greyDisabled"
+        tools:text="(10)" />
+
+    <TextView
+        android:id="@+id/menu_item_namethai"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menu_name"
+        android:layout_below="@+id/menu_item_rating"
+        android:textColor="@color/greySecondary"
+        tools:text="name thai" />
+
+
+    <ImageView
+        android:src="@drawable/ic_toggle_star_outline_24"
+        android:id="@+id/star"
+        style="@style/AppTheme.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/greySecondary"
+         />
+
+</RelativeLayout>
